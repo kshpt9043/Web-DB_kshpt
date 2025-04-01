@@ -1,6 +1,6 @@
 <?php header('Content-Type: text/html; charset=euc-kr'); ?>
 <HTML>
-	<HEAD>      
+	<HEAD><meta charset="utf-8">      
 		<script language="javascript">
 			// ���޹��� �޽��� ���
 			function showMessage( message )
