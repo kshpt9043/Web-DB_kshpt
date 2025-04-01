@@ -2,7 +2,7 @@
 <HTML>
 	<HEAD>      
 		<script language="javascript">
-			// ì „ë‹¬ë°›ì€ ë©”ì‹œì§€ ì¶œë ¥
+			// Àü´Ş¹ŞÀº ¸Ş½ÃÁö Ãâ·Â
 			function showMessage( message )
 			{
 				if ( ( message != null ) && ( message != "" ) && ( message.substring( 0, 3 ) == " * " )  ) 
@@ -10,7 +10,7 @@
 					alert( message );
 				}
 			}     
-			// ì§€ì •í•œ urlë¡œ ì´ë™í•˜ëŠ” í•¨ìˆ˜ 
+			// ÁöÁ¤ÇÑ url·Î ÀÌµ¿ÇÏ´Â ÇÔ¼ö 
 			function move( url )	
 	 		{
 				document.formm.action = url;
@@ -19,20 +19,20 @@
 		</script>
 	</HEAD>
 	<BODY onLoad="showMessage( '' );" >
-		<!-- í™”ë©´êµ¬ì„± -->
+		<!-- È­¸é±¸¼º -->
 		<BR> 
 		<form name = "formm" method = "post">				
 			&nbsp; &nbsp; &nbsp; 
-			ì±… ì œëª© : <INPUT TYPE="text" NAME="message" SIZE="60"> 
+			Ã¥ Á¦¸ñ : <INPUT TYPE="text" NAME="message" SIZE="60"> 
 		</form>  
 		 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
-		<INPUT TYPE = "button" value = "ê²Œì„ ì´ë¦„ ê²€ìƒ‰" onClick="javascript:move( './search.php' );">
-		<INPUT TYPE = "button" value = "ìƒˆ ê²Œì„  ì¶”ê°€" onClick="javascript:move( './insert.php' );">	
-		<INPUT TYPE = "button" value = "ê²Œì„ ì‚­ì œ" onClick="javascript:move( './delete.php' );">	
+		<INPUT TYPE = "button" value = "°ÔÀÓ ÀÌ¸§ °Ë»ö" onClick="javascript:move( './search.php' );">
+		<INPUT TYPE = "button" value = "»õ °ÔÀÓ  Ãß°¡" onClick="javascript:move( './insert.php' );">	
+		<INPUT TYPE = "button" value = "°ÔÀÓ »èÁ¦" onClick="javascript:move( './delete.php' );">	
 		<BR> <BR> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 		<BR> <BR>  
 
-		<!-- ì±… ëª©ë¡ ì¶œë ¥ -->
+		<!-- Ã¥ ¸ñ·Ï Ãâ·Â -->
 		<?php include("./selectSQL.php"); ?>
 </BODY>
 </HTML>

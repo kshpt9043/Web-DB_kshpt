@@ -1,6 +1,6 @@
 <?php header('Content-Type: text/html; charset=euc-kr'); ?>
 <?php 
-	// ì´ì „ íŽ˜ì´ì§€ì—ì„œ ì „ë‹¬ ë°›ì€ ë©”ì‹œì§€ í™•ì¸
+	// ÀÌÀü ÆäÀÌÁö¿¡¼­ Àü´Þ ¹ÞÀº ¸Þ½ÃÁö È®ÀÎ
 	$id = $_POST['id'];
 	$name = $_POST['name'];
 	$developer = $_POST['developer'];
@@ -9,29 +9,29 @@
 	$image = $_POST['image'];
 	$message = "";
 
-	// MySQL ë“œë¼ì´ë²„ ì—°ê²° 
+	// MySQL µå¶óÀÌ¹ö ¿¬°á 
 	include("./SQLconstants.php");
 	$conn = mysqli_connect( $mySQL_host, $mySQL_id, $mySQL_password, $mySQL_database ) or die( "Can't access DB" );
 	mysqli_query($conn, "SET NAMES 'euckr'");
 	mysqli_set_charset($conn, "euckr");
 
-	// MySQL ì±… ì¶”ê°€ ì‹¤í–‰ 	
+	// MySQL Ã¥ Ãß°¡ ½ÇÇà 	
 	$query = "INSERT INTO game( id, name, developer, date, price, image ) VALUES ( '".$id."', '".$name."', '".$developer."', '".$date."', '".$price."', '".$image."');"; 
 	$result = mysqli_query( $conn, $query );
 	if( !$result ) 
 	{	
-		$message = "ê²Œìž„(".$name.")ì„ ë“±ë¡í•˜ì˜€ìŠµë‹ˆë‹¤"; 
+		$message = "°ÔÀÓ(".$name.")À» µî·ÏÇÏ¿´½À´Ï´Ù"; 
 	} 
 	else 
 	{
-		$message = "ê²Œìž„(".$name.")ì„ ë“±ë¡í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤"; 
+		$message = "°ÔÀÓ(".$name.")À» µî·ÏÇÒ ¼ö ¾ø½À´Ï´Ù"; 
 	} 
 
-	// MySQL ë“œë¼ì´ë²„ ì—°ê²° í•´ì œ
+	// MySQL µå¶óÀÌ¹ö ¿¬°á ÇØÁ¦
 	mysqli_close( $conn );
 ?>
 
-<!-- ë‹¤ìŒ íŽ˜ì´ì§€ë¡œ ë©”ì‹œì§€ ì „ë‹¬ -->
+<!-- ´ÙÀ½ ÆäÀÌÁö·Î ¸Þ½ÃÁö Àü´Þ -->
 <form name = "frm" method = "post" action = "./search.php" >
 	<input type = 'hidden' name = 'message' value = ' * <?php echo $message;?>' >
 </form>

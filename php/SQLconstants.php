@@ -1,5 +1,5 @@
 <?php 
-	// MySQL ID : MySQL ì„¤ì¹˜ì‹œ ì•„ì´ë”” ex) root, test, ...
+	// MySQL ID : MySQL ¼³Ä¡½Ã ¾ÆÀÌµð ex) root, test, ...
 	$mySQL_id = "kshpt9043"; 	
 
 	// MySQL Password	
