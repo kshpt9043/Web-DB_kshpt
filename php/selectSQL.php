@@ -1,29 +1,29 @@
 <?php header('Content-Type: text/html; charset=euc-kr'); ?>
 <?php 
-	// ÀÌÀü ÆäÀÌÁö¿¡¼­ Àü´Þ ¹ÞÀº ¸Þ½ÃÁö È®ÀÎ
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
 	$message =  $_POST['message'];
 	$message = ( ( ( $message == null ) || ( $message == "" ) || ( strncmp( $message, " * ", 3 ) == 0 ) ) ? "_%" : $message );
 
-	// MySQL µå¶óÀÌ¹ö ¿¬°á 
+	// MySQL ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ 
 	include("./SQLconstants.php");
 	$conn = mysqli_connect($mySQL_host,$mySQL_id,$mySQL_password,$mySQL_database) or die ("Can't access DB");
 	mysqli_query($conn, "SET NAMES 'euckr'");
 	mysqli_set_charset($conn, "euckr");
 
-	// MySQL Ã¥ °Ë»ö ½ÇÇà ¹× °á°ú Ãâ·Â
+	// MySQL Ã¥ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	$query = "select * from game where title like '%".$message."%';";
 	$resultSet = mysqli_query( $conn, $query );
 	while( $result = mysqli_fetch_array( $resultSet ) )
 	{
 		echo "\n<BR>ID : ".$result['id'];
-		echo "\n<BR>°ÔÀÓÀÌ¸§ : ".$result['title'];
-		echo "\n<BR>Á¦ÀÛ»ç : ".$result['developer'];
-		echo "\n<BR>Ãâ½ÃÀÏ : ".$result['date'];
-		echo "\n<BR>°¡°Ý : ".$price['price'];
+		echo "\n<BR>ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ : ".$result['title'];
+		echo "\n<BR>ï¿½ï¿½ï¿½Û»ï¿½ : ".$result['developer'];
+		echo "\n<BR>ï¿½ï¿½ï¿½ï¿½ï¿½ : ".$result['date'];
+		echo "\n<BR>ï¿½ï¿½ï¿½ï¿½ : ".$result['price'];
 		echo "\n<BR><img src = '".$result['image']."' height='280' width='180'> <br>";
 	}
 
-	// MySQL µå¶óÀÌ¹ö ¿¬°á ÇØÁ¦
+	// MySQL ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	mysqli_free_result( $resultSet );
 	mysqli_close( $conn );
 ?>
