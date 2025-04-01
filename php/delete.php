@@ -4,13 +4,13 @@
 		<BR> 
 		<form name = "formm" method = "post" action = "./deleteSQL.php">				
 			&nbsp; &nbsp; &nbsp; 
-			»èÁ¦ÇÒ Ã¥ ID : <INPUT TYPE="text" NAME="id" SIZE="60"> 
+			ì‚­ì œí•  ê²Œìž„ ID : <INPUT TYPE="text" NAME="id" SIZE="60"> 
 		</form>  
 		 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
-		 <INPUT TYPE="button" value="»èÁ¦" onClick="javascript:document.formm.submit();"> &nbsp; 
+		 <INPUT TYPE="button" value="ì‚­ì œ" onClick="javascript:document.formm.submit();"> &nbsp; 
 		<BR><BR>  
 
-		<!-- »èÁ¦ ÈÄº¸ Ã¥ ¸ñ·Ï Ãâ·Â -->
+		<!-- ì‚­ì œ í›„ë³´ ê²Œìž„ ëª©ë¡ ì¶œë ¥ -->
 		<?php include("./selectSQL.php"); ?>
 	</BODY>
 </HTML>

@@ -11,15 +11,15 @@
 	mysqli_set_charset($conn, "euckr");
 
 	// MySQL 책 검색 실행 및 결과 출력
-	$query = "select * from book where title like '%".$message."%';";
+	$query = "select * from game where title like '%".$message."%';";
 	$resultSet = mysqli_query( $conn, $query );
 	while( $result = mysqli_fetch_array( $resultSet ) )
 	{
 		echo "\n<BR>ID : ".$result['id'];
-		echo "\n<BR>책제목 : ".$result['title'];
-		echo "\n<BR>저자 : ".$result['author'];
-		echo "\n<BR>출판사 : ".$result['publisher'];
-		echo "\n<BR>출판일 : ".$result['date'];
+		echo "\n<BR>게임이름 : ".$result['title'];
+		echo "\n<BR>제작사 : ".$result['developer'];
+		echo "\n<BR>출시일 : ".$result['date'];
+		echo "\n<BR>가격 : ".$price['price'];
 		echo "\n<BR><img src = '".$result['image']."' height='280' width='180'> <br>";
 	}
 

@@ -1,37 +1,37 @@
 <?php header('Content-Type: text/html; charset=euc-kr'); ?>
 <?php 
-	// ÀÌÀü ÆäÀÌÁö¿¡¼­ Àü´Þ ¹ÞÀº ¸Þ½ÃÁö È®ÀÎ
+	// ì´ì „ íŽ˜ì´ì§€ì—ì„œ ì „ë‹¬ ë°›ì€ ë©”ì‹œì§€ í™•ì¸
 	$id = $_POST['id'];
-	$title = $_POST['title'];
-	$author = $_POST['author'];
-	$publisher = $_POST['publisher'];
+	$name = $_POST['name'];
+	$developer = $_POST['developer'];
 	$date = $_POST['date'];
+	$price = $_POST['price'];
 	$image = $_POST['image'];
 	$message = "";
 
-	// MySQL µå¶óÀÌ¹ö ¿¬°á 
+	// MySQL ë“œë¼ì´ë²„ ì—°ê²° 
 	include("./SQLconstants.php");
 	$conn = mysqli_connect( $mySQL_host, $mySQL_id, $mySQL_password, $mySQL_database ) or die( "Can't access DB" );
 	mysqli_query($conn, "SET NAMES 'euckr'");
 	mysqli_set_charset($conn, "euckr");
 
-	// MySQL Ã¥ Ãß°¡ ½ÇÇà 	
-	$query = "INSERT INTO book( id, title, author, publisher, date, image ) VALUES ( '".$id."', '".$title."', '".$author."', '".$publisher."', '".$date."', '".$image."');"; 
+	// MySQL ì±… ì¶”ê°€ ì‹¤í–‰ 	
+	$query = "INSERT INTO game( id, name, developer, date, price, image ) VALUES ( '".$id."', '".$name."', '".$developer."', '".$date."', '".$price."', '".$image."');"; 
 	$result = mysqli_query( $conn, $query );
 	if( !$result ) 
 	{	
-		$message = "Ã¥(".$title.")À» µî·ÏÇÏ¿´½À´Ï´Ù"; 
+		$message = "ê²Œìž„(".$name.")ì„ ë“±ë¡í•˜ì˜€ìŠµë‹ˆë‹¤"; 
 	} 
 	else 
 	{
-		$message = "Ã¥(".$title.")À» µî·ÏÇÒ ¼ö ¾ø½À´Ï´Ù"; 
+		$message = "ê²Œìž„(".$name.")ì„ ë“±ë¡í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤"; 
 	} 
 
-	// MySQL µå¶óÀÌ¹ö ¿¬°á ÇØÁ¦
+	// MySQL ë“œë¼ì´ë²„ ì—°ê²° í•´ì œ
 	mysqli_close( $conn );
 ?>
 
-<!-- ´ÙÀ½ ÆäÀÌÁö·Î ¸Þ½ÃÁö Àü´Þ -->
+<!-- ë‹¤ìŒ íŽ˜ì´ì§€ë¡œ ë©”ì‹œì§€ ì „ë‹¬ -->
 <form name = "frm" method = "post" action = "./search.php" >
 	<input type = 'hidden' name = 'message' value = ' * <?php echo $message;?>' >
 </form>

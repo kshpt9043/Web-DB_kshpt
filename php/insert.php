@@ -2,17 +2,16 @@
 <HTML>
 	<BODY>
 		<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-		<b> - »õ Ã¥ µî·Ï - </b>
+		<b> - ìƒˆ ê²Œì„ ë“±ë¡ - </b>
 		<br> 
 		<form name = "formm" method = "post" action = "./insertSQL.php">				
 			<br> I &nbsp; &nbsp; D &nbsp;:  <INPUT TYPE = "text" name = "id" SIZE="60" >
-			<br> Á¦ &nbsp; ¸ñ : <INPUT TYPE = "text" NAME = "title" SIZE="60" >
-			<br> Àú &nbsp; ÀÚ : <INPUT TYPE = "text" NAME = "author" SIZE="60" >
-			<br> ÃâÆÇ»ç : <INPUT TYPE = "text" NAME = "publisher" SIZE="60" >
-			<br> ÃâÆÇÀÏ : <INPUT TYPE = "text" NAME = "date" SIZE="60" >
-			<br> ÀÌ¹ÌÁö : <INPUT TYPE = "text" NAME = "image" SIZE="60" >
+			<br> ì´ &nbsp; ë¦„ : <INPUT TYPE = "text" NAME = "name" SIZE="60" >
+			<br> ì œì‘ì‚¬ : <INPUT TYPE = "text" NAME = "developer" SIZE="60" >
+			<br> ì¶œì‹œì¼ : <INPUT TYPE = "text" NAME = "date" SIZE="60" >
+			<br> ì´ë¯¸ì§€ : <INPUT TYPE = "text" NAME = "image" SIZE="60" >
 		</form>  
 		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		<INPUT TYPE="button" value="µî·Ï" onClick="javascript:document.formm.submit();"> &nbsp; 
+		<INPUT TYPE="button" value="ë“±ë¡" onClick="javascript:document.formm.submit();"> &nbsp; 
 	</BODY>
 </HTML>
