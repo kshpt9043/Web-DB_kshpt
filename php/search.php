@@ -2,7 +2,7 @@
 <HTML>
 	<HEAD>      
 		<script language="javascript">
-			// Àü´Þ¹ÞÀº ¸Þ½ÃÁö Ãâ·Â
+			// ï¿½ï¿½ï¿½Þ¹ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 			function showMessage( message )
 			{
 				if ( ( message != null ) && ( message != "" ) && ( message.substring( 0, 3 ) == " * " )  ) 
@@ -10,29 +10,44 @@
 					alert( message );
 				}
 			}     
-			// ÁöÁ¤ÇÑ url·Î ÀÌµ¿ÇÏ´Â ÇÔ¼ö 
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ urlï¿½ï¿½ ï¿½Ìµï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½ 
 			function move( url )	
 	 		{
 				document.formm.action = url;
 				document.formm.submit();
 			}
+			//find game name
+			function searchByGameName()
+			{
+				document.formm.action = './search.jsp';
+				document.formm.developer.value = "";
+				document.formm.submit();
+			}
+			//find game developer
+			function searchByDeveloperName()
+			{
+				document.formm.action = './search.jsp';
+				document.formm.message.value = "";
+				document.formm.submit();
+			}
 		</script>
 	</HEAD>
 	<BODY onLoad="showMessage( '' );" >
-		<!-- È­¸é±¸¼º -->
+		<!-- È­ï¿½é±¸ï¿½ï¿½ -->
 		<BR> 
 		<form name = "formm" method = "post">				
 			&nbsp; &nbsp; &nbsp; 
-			Ã¥ Á¦¸ñ : <INPUT TYPE="text" NAME="message" SIZE="60"> 
+			Ã¥ ï¿½ï¿½ï¿½ï¿½ : <INPUT TYPE="text" NAME="message" SIZE="60"> 
 		</form>  
 		 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
-		<INPUT TYPE = "button" value = "°ÔÀÓ ÀÌ¸§ °Ë»ö" onClick="javascript:move( './search.php' );">
-		<INPUT TYPE = "button" value = "»õ °ÔÀÓ  Ãß°¡" onClick="javascript:move( './insert.php' );">	
-		<INPUT TYPE = "button" value = "°ÔÀÓ »èÁ¦" onClick="javascript:move( './delete.php' );">	
+		<INPUT TYPE = "button" value = "ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½Ë»ï¿½" onClick="searchByGameName();">
+		<INPUT TYPE = "button" value = "ê°œë°œì‚¬ ì´ë¦„ ê²€ìƒ‰" onClick="searchByDeveloperName;">
+		<INPUT TYPE = "button" value = "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ï¿½ß°ï¿½" onClick="javascript:move( './insert.php' );">	
+		<INPUT TYPE = "button" value = "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" onClick="javascript:move( './delete.php' );">	
 		<BR> <BR> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 		<BR> <BR>  
 
-		<!-- Ã¥ ¸ñ·Ï Ãâ·Â -->
+		<!-- Ã¥ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ -->
 		<?php include("./selectSQL.php"); ?>
 </BODY>
 </HTML>
