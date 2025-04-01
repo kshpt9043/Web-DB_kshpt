@@ -16,10 +16,10 @@
 	while( $result = mysqli_fetch_array( $resultSet ) )
 	{
 		echo "\n<BR>ID : ".$result['id'];
-		echo "\n<BR>??????? : ".$result['title'];
-		echo "\n<BR>????? : ".$result['developer'];
-		echo "\n<BR>????? : ".$result['date'];
-		echo "\n<BR>???? : ".$result['price'];
+		echo "\n<BR>게임 제목 : ".$result['title'];
+		echo "\n<BR>제작사 : ".$result['developer'];
+		echo "\n<BR>출시일 : ".$result['date'];
+		echo "\n<BR>가격 : ".$result['price'];
 		echo "\n<BR><img src = '".$result['image']."' height='280' width='180'> <br>";
 	}
 
