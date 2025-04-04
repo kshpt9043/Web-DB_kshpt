@@ -16,7 +16,7 @@
 	mysqli_set_charset($conn, "utf8");
 
 	// MySQL å �߰� ���� 	
-	$query = "INSERT INTO game( id, name, developer, date, price, image ) VALUES ( '".$id."', '".$name."', '".$developer."', '".$date."', '".$price."', '".$image."');"; 
+	$query = "INSERT INTO game( id, title, developer, date, price, image ) VALUES ( '".$id."', '".$title."', '".$developer."', '".$date."', '".$price."', '".$image."');"; 
 	$result = mysqli_query( $conn, $query );
 	if( !$result ) 
 	{	

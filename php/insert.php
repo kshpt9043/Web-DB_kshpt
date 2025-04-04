@@ -9,7 +9,7 @@
 			<br> 제 &nbsp; 목 : <INPUT TYPE = "text" NAME = "name" SIZE="60" >
 			<br> 개발사 : <INPUT TYPE = "text" NAME = "developer" SIZE="60" >
 			<br> 출시일 : <INPUT TYPE = "text" NAME = "date" SIZE="60" >
-			<br> 가격 : <INPUT TYPE = "text" NAME = "price" SIZE="60" >
+			<br> 가 &nbsp; 격 : <INPUT TYPE = "text" NAME = "price" SIZE="60" >
 			<br> 이미지 : <INPUT TYPE = "text" NAME = "image" SIZE="60" >
 		</form>  
 		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
