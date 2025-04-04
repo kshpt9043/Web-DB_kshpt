@@ -20,6 +20,10 @@
 	{
 		$query = "select * from game where developer like '%".$message."%';";
 	}
+	else
+	{
+		$query = "select * from game";
+	}
 
 	$resultSet = mysqli_query( $conn, $query );
 	while( $result = mysqli_fetch_array( $resultSet ) )
