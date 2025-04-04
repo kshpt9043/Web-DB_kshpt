@@ -37,7 +37,7 @@
 		<BR> 
 		<form name = "formm" method = "post">				
 			&nbsp; &nbsp; &nbsp; 
-			å ���� : <INPUT TYPE="text" NAME="message" SIZE="60"> 
+			게임제목 : <INPUT TYPE="text" NAME="message" SIZE="60"> 
 		</form>  
 		 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
 		<INPUT TYPE = "button" value = "게임 제목 검색" onClick="searchByGameName();">

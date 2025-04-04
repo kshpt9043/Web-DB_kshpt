@@ -10,7 +10,7 @@
 	include("./SQLconstants.php");
 	$conn = mysqli_connect($mySQL_host,$mySQL_id,$mySQL_password,$mySQL_database) or die ("Can't access DB");
 	mysqli_query($conn, "SET NAMES 'euckr'");
-	mysqli_set_charset($conn, "euckr");
+	mysqli_set_charset($conn, "utf8");
 
 	// MySQL å �˻� ���� �� ��� ���
 	$query = "select * from game where title like '%".$message."%';";
