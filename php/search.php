@@ -40,7 +40,8 @@
 			게임제목 : <INPUT TYPE="text" NAME="message" SIZE="60"> 
 		</form>  
 		 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-		<select size="2">
+		<select>
+			<option>선택하세요</option>
 			<option value="1">제목</option>
 			<option value="2">개발사</option>
 		</select>   
