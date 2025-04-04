@@ -39,7 +39,11 @@
 			&nbsp; &nbsp; &nbsp; 
 			게임제목 : <INPUT TYPE="text" NAME="message" SIZE="60"> 
 		</form>  
-		 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
+		 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<select size="2">
+			<option value="1">제목</option>
+			<option value="2">개발사</option>
+		</select>   
 		<INPUT TYPE = "button" value = "게임 제목 검색" onClick="searchByGameName();">
 		<INPUT TYPE = "button" value = "개발사 이름 검색" onClick="searchByDeveloperName();">
 		<INPUT TYPE = "button" value = "새 게임 추가" onClick="javascript:move( './insert.php' );">	

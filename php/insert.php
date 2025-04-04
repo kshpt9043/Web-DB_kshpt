@@ -12,6 +12,6 @@
 			<br> 이미지 : <INPUT TYPE = "text" NAME = "image" SIZE="60" >
 		</form>  
 		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		<INPUT TYPE="button" value="���" onClick="javascript:document.formm.submit();"> &nbsp; 
+		<INPUT TYPE="button" value="등록" onClick="javascript:document.formm.submit();"> &nbsp; 
 	</BODY>
 </HTML>

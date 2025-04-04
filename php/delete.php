@@ -7,7 +7,7 @@
 			삭제할 게임 ID : <INPUT TYPE="text" NAME="id" SIZE="60"> 
 		</form>  
 		 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
-		 <INPUT TYPE="button" value="����" onClick="javascript:document.formm.submit();"> &nbsp; 
+		 <INPUT TYPE="button" value="삭제" onClick="javascript:document.formm.submit();"> &nbsp; 
 		<BR><BR>  
 
 		<!-- ���� �ĺ� ���� ��� ��� -->
