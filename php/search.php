@@ -38,7 +38,7 @@
 		<form name = "formm" method = "post">				
 			&nbsp; &nbsp; &nbsp;
 			<select name="select">
-			<option>선택하세요</option>
+			<option value="0" selected>선택하세요</option>
 			<option value="1">제목</option>
 			<option value="2">개발사</option>
 		</select>  
