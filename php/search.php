@@ -37,16 +37,15 @@
 		<BR> 
 		<form name = "formm" method = "post">				
 			&nbsp; &nbsp; &nbsp;
-			<select>
+			<select name="select">
 			<option>선택하세요</option>
 			<option value="1">제목</option>
 			<option value="2">개발사</option>
 		</select>  
-			<INPUT TYPE="text" NAME="message" SIZE="60"> 
+			<INPUT TYPE="text" NAME="message" SIZE="60" placeholder="검색어를 입력하세요">
+			<INPUT TYPE="submit" value="검색"> 
 		</form>  
 		 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		<INPUT TYPE = "button" value = "게임 제목 검색" onClick="searchByGameName();">
-		<INPUT TYPE = "button" value = "개발사 이름 검색" onClick="searchByDeveloperName();">
 		<INPUT TYPE = "button" value = "새 게임 추가" onClick="javascript:move( './insert.php' );">	
 		<INPUT TYPE = "button" value = "게임 삭제" onClick="javascript:move( './delete.php' );">	
 		<BR> <BR> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
