@@ -20,11 +20,11 @@
 	$result = mysqli_query( $conn, $query );
 	if( !$result ) 
 	{	
-		$message = "����(".$name.")�� ����Ͽ����ϴ�"; 
+		$message = "게임(".$name.")을 등록하였습니다"; 
 	} 
 	else 
 	{
-		$message = "����(".$name.")�� ����� �� �����ϴ�"; 
+		$message = "게임(".$name.")을 등록할 수 없습니다"; 
 	} 
 
 	// MySQL ����̹� ���� ����

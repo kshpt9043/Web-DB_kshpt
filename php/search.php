@@ -40,10 +40,10 @@
 			å ���� : <INPUT TYPE="text" NAME="message" SIZE="60"> 
 		</form>  
 		 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
-		<INPUT TYPE = "button" value = "���� �̸� �˻�" onClick="searchByGameName();">
+		<INPUT TYPE = "button" value = "게임 제목 검색" onClick="searchByGameName();">
 		<INPUT TYPE = "button" value = "개발사 이름 검색" onClick="searchByDeveloperName();">
-		<INPUT TYPE = "button" value = "�� ����  �߰�" onClick="javascript:move( './insert.php' );">	
-		<INPUT TYPE = "button" value = "���� ����" onClick="javascript:move( './delete.php' );">	
+		<INPUT TYPE = "button" value = "새 게임 추가" onClick="javascript:move( './insert.php' );">	
+		<INPUT TYPE = "button" value = "게임 삭제" onClick="javascript:move( './delete.php' );">	
 		<BR> <BR> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 		<BR> <BR>  
 
