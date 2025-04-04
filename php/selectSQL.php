@@ -2,9 +2,9 @@
 <?php 
 	// ���� ���������� ���� ���� �޽��� Ȯ��
 	$message =  $_POST['message'];
-	$developer = $_POST['developer'];
+	$select = $_POST['select'];
 	$message = ( ( ( $message == null ) || ( $message == "" ) || ( strncmp( $message, " * ", 3 ) == 0 ) ) ? "_%" : $message );
-	$developer = (($developer == null) || ($developer == "")) ? "_%" : $developer; 
+	$select = (($select == null) || ($select == "")) ? "_%" : $select; 
 
 	// MySQL ����̹� ���� 
 	include("./SQLconstants.php");
@@ -12,8 +12,15 @@
 	mysqli_query($conn, "SET NAMES 'euckr'");
 	mysqli_set_charset($conn, "utf8");
 
-	// MySQL å �˻� ���� �� ��� ���
-	$query = "select * from game where title like '%".$message."%';";
+	if ($select == "1")
+	{
+		$query = "select * from game where title like '%".$message."%';";
+	}
+	else if ($select == "2")
+	{
+		$query = "select * from game where developer like '%".$message."%';";
+	}
+	
 	$resultSet = mysqli_query( $conn, $query );
 	while( $result = mysqli_fetch_array( $resultSet ) )
 	{
