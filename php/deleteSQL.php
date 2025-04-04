@@ -1,29 +1,29 @@
-<?php header('Content-Type: text/html; charset=euc-kr'); ?>
+<?php header('Content-Type: text/html; charset=UTF-8'); ?>
 <?php 
-	// ÀÌÀü ÆäÀÌÁö¿¡¼­ Àü´Þ ¹ÞÀº ¸Þ½ÃÁö È®ÀÎ
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
 	$id = $_POST['id'];
 
-	// MySQL µå¶óÀÌ¹ö ¿¬°á 
+	// MySQL ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ 
 	include("./SQLconstants.php"); 
 	$conn = mysqli_connect($mySQL_host,$mySQL_id,$mySQL_password,$mySQL_database) or die ("Can't access DB");
 
-	// MySQL Ã¥ »èÁ¦ ½ÇÇà 	
+	// MySQL Ã¥ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 	
 	$query = "delete from game where id = '".$id."';";
 	$result = mysqli_query( $conn, $query );
 	if( $result ) 
 	{	
-		$message = "ID(".$id.")ÀÎ °ÔÀÓÀ» »èÁ¦ÇÏ¿´½À´Ï´Ù."; 
+		$message = "ID(".$id.")ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½."; 
 	} 
 	else 
 	{
-		$message = "ID(".$id.")ÀÎ °ÔÀÓÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù. »èÁ¦½Ã °ÔÀÓ ÀÌ¸§ÀÌ ¾Æ´Ï°í °ÔÀÓ ID¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä."; 
+		$message = "ID(".$id.")ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Æ´Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ IDï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½."; 
 	} 
 
-	// MySQL µå¶óÀÌ¹ö ¿¬°á ÇØÁ¦
+	// MySQL ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	mysqli_close( $conn );
 ?>
 
-<!-- ´ÙÀ½ ÆäÀÌÁö·Î ¸Þ½ÃÁö Àü´Þ -->
+<!-- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ -->
 <form name = "frm" method = "post" action = "./search.php" >
 	<input type = 'hidden' name = 'message' value = ' * <?php echo str_replace("'", "", $message);?>' >
 </form>

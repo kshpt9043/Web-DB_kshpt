@@ -1,4 +1,4 @@
-<?php header('Content-Type: text/html; charset=euc-kr'); ?>
+<?php header('Content-Type: text/html; charset=UTF-8'); ?>
 <?php 
 	// ���� ���������� ���� ���� �޽��� Ȯ��
 	$message =  $_POST['message'];

@@ -1,16 +1,16 @@
-<?php header('Content-Type: text/html; charset=euc-kr'); ?>
+<?php header('Content-Type: text/html; charset=UTF-8'); ?>
 <HTML>
 	<BODY>
 		<BR> 
 		<form name = "formm" method = "post" action = "./deleteSQL.php">				
 			&nbsp; &nbsp; &nbsp; 
-			»èÁ¦ÇÒ °ÔÀÓ ID : <INPUT TYPE="text" NAME="id" SIZE="60"> 
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ID : <INPUT TYPE="text" NAME="id" SIZE="60"> 
 		</form>  
 		 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
-		 <INPUT TYPE="button" value="»èÁ¦" onClick="javascript:document.formm.submit();"> &nbsp; 
+		 <INPUT TYPE="button" value="ï¿½ï¿½ï¿½ï¿½" onClick="javascript:document.formm.submit();"> &nbsp; 
 		<BR><BR>  
 
-		<!-- »èÁ¦ ÈÄº¸ °ÔÀÓ ¸ñ·Ï Ãâ·Â -->
+		<!-- ï¿½ï¿½ï¿½ï¿½ ï¿½Äºï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ -->
 		<?php include("./selectSQL.php"); ?>
 	</BODY>
 </HTML>

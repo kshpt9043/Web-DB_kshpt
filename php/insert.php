@@ -1,17 +1,17 @@
-<?php header('Content-Type: text/html; charset=euc-kr'); ?>
+<?php header('Content-Type: text/html; charset=UTF-8'); ?>
 <HTML>
 	<BODY>
 		<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-		<b> - »õ °ÔÀÓ µî·Ï - </b>
+		<b> - ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ - </b>
 		<br> 
 		<form name = "formm" method = "post" action = "./insertSQL.php">				
 			<br> I &nbsp; &nbsp; D &nbsp;:  <INPUT TYPE = "text" name = "id" SIZE="60" >
-			<br> ÀÌ &nbsp; ¸§ : <INPUT TYPE = "text" NAME = "name" SIZE="60" >
-			<br> Á¦ÀÛ»ç : <INPUT TYPE = "text" NAME = "developer" SIZE="60" >
-			<br> Ãâ½ÃÀÏ : <INPUT TYPE = "text" NAME = "date" SIZE="60" >
-			<br> ÀÌ¹ÌÁö : <INPUT TYPE = "text" NAME = "image" SIZE="60" >
+			<br> ï¿½ï¿½ &nbsp; ï¿½ï¿½ : <INPUT TYPE = "text" NAME = "name" SIZE="60" >
+			<br> ï¿½ï¿½ï¿½Û»ï¿½ : <INPUT TYPE = "text" NAME = "developer" SIZE="60" >
+			<br> ï¿½ï¿½ï¿½ï¿½ï¿½ : <INPUT TYPE = "text" NAME = "date" SIZE="60" >
+			<br> ï¿½Ì¹ï¿½ï¿½ï¿½ : <INPUT TYPE = "text" NAME = "image" SIZE="60" >
 		</form>  
 		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-		<INPUT TYPE="button" value="µî·Ï" onClick="javascript:document.formm.submit();"> &nbsp; 
+		<INPUT TYPE="button" value="ï¿½ï¿½ï¿½" onClick="javascript:document.formm.submit();"> &nbsp; 
 	</BODY>
 </HTML>
