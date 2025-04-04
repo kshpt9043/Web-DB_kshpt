@@ -1,5 +1,10 @@
 <?php header('Content-Type: text/html; charset=UTF-8'); ?>
 <?php 
+	// ���� ���������� ���� ���� �޽��� Ȯ��
+	$message =  $_POST['message'];
+	$select = $_POST['select'];
+	$message = ( ( ( $message == null ) || ( $message == "" ) || ( strncmp( $message, " * ", 3 ) == 0 ) ) ? "_%" : $message );
+	$select = (($select == null) || ($select == "")) ? "_%" : $select; 
 
 	// MySQL ����̹� ���� 
 	include("./SQLconstants.php");
@@ -7,22 +12,13 @@
 	mysqli_query($conn, "SET NAMES 'euckr'");
 	mysqli_set_charset($conn, "utf8");
 
-	if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['message']) && $_POST['message'] !== "")
+	if ($select == "1")
 	{
-		$message = $_POST['message'];
-		$select = $_POST['select'];
-	
-		if ($select == "1") {
-			$sql = "SELECT * FROM GameDB WHERE title LIKE '%$message%'";
-		} else if ($select == "2") {
-			$sql = "SELECT * FROM GameDB WHERE developer LIKE '%$message%'";
-		} else {
-			$sql = "SELECT * FROM GameDB";
-		}
-	} 
-	else 
+		$query = "select * from game where title like '%".$message."%';";
+	}
+	else if ($select == "2")
 	{
-		$sql = "SELECT * FROM GameDB";
+		$query = "select * from game where developer like '%".$message."%';";
 	}
 
 	$resultSet = mysqli_query( $conn, $query );
